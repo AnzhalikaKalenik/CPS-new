@@ -1,0 +1,150 @@
+@font-face {
+	font-family: 'TT Lakes Medium'; 
+	src: url("/fonts/TTLakes-Medium.ttf");
+}
+@font-face {
+	font-family: 'TT Lakes Regular'; 
+	src: url("/fonts/TTLakes-Regular.ttf");
+}
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+.content{
+    padding-left: 16px;
+    padding-bottom: 34px;
+    // border: 1px solid black;
+    background-color: #F8F8F8;
+
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
+.content__title{
+    min-height: 56px;
+    width: 100%;
+    padding: 16px 16px 16px 0px;
+    border-top: 1px solid #D9FFF5;
+    background-image: linear-gradient(to right, #F8F8F8, #fff);
+    
+    font-family: 'TT Lakes Regular';
+    color: #7E7E82;
+}
+.content-swiper{
+    padding: 16px 16px 16px 0px;
+}
+.swiper-slide{
+    max-width: 240px;
+}
+.swiper-slide__block{
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    background-color: #fff;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    padding: 0px 16px;
+}
+.block-go{
+    margin-left: 10px;
+    min-width: 40px;
+    min-height: 40px;
+    border: 2px solid #FF3E79;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* пагинация */
+.content-swiper .swiper-pagination {
+    bottom: 0;
+}
+.content-swiper .swiper-pagination-bullet {
+    background: #B5B6BC;
+}
+.grid-version{
+    display: none;
+}
+
+
+
+/*768px*/
+@media (min-width: 768px){
+    .content{
+        padding-left: 24px;
+    }
+    .content-swiper{
+        display: none;
+    }
+    .grid-version{
+        display: grid;
+    }
+    .grid-wrapper{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 24px;
+        row-gap: 16px;
+        padding: 24px 24px 24px 0px;
+    }
+    .grid-wrapper__block{
+        max-width: 240px;
+        height: 72px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    
+        background-color: #fff;
+        border: 1px solid #EAEAEA;
+        border-radius: 6px;
+        padding: 0px 16px;
+    }
+
+
+    .read-more{
+        font-family: 'TT Lakes Medium';
+        color: #1B1C21;
+        cursor: pointer;
+    }
+    .read-more::before{
+        content: url(../img/brands/readmore1.png) " Показать все";
+        position: relative;
+    }
+    .read-more.open::before{
+        content: url(../img/brands/readmore2.png) " Скрыть";
+        position: relative;
+    }
+
+    .tablet.open, .desktop.open{
+        display: flex;
+    }
+    .tablet, .desktop{
+        display: none;
+    }
+}
+
+
+/*1120px*/
+@media (min-width: 1120px){
+    .content{
+        padding-left: 32px;
+    }
+    .grid-wrapper{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        // column-gap: 32px;
+        row-gap: 16px;
+        padding: 24px 32px 24px 0px;
+    }
+    .tablet{
+        display: flex;
+    }
+}
+

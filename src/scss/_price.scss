@@ -1,0 +1,135 @@
+.swiper-slide-price{
+    max-width: 260px;
+    font-size: 14px;
+
+}
+.price-title2{
+    color: #7E7E82;
+}
+.swiper-slide__block-price{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+
+    .price-group{
+        display: flex;
+
+        button{
+            margin-left: 15px;
+            width: 119px;
+            height: 32px;
+            border:solid 1px #FF3E79;
+            border-radius: 25px 25px 25px 25px;
+            background: #FF3E79;
+            color: #fff;
+            font-size: 12px;
+            align-self: flex-end;
+
+            img{
+                margin-left: 15px;
+            }
+        }
+        .button1{
+            margin-left: 45px;
+        }
+    }
+}
+
+
+.price-textinfo{
+    width: 100%;
+    margin-top: 16px;
+
+    font-size: 14px;
+    font-family: 'TT Lakes Regular';
+    color: #1B1C21;
+}
+.сommercial-offer{
+    margin-top: 16px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'TT Lakes Medium'; 
+    cursor: pointer;
+    
+
+    img{
+        margin-left: 5px;
+    }
+}
+.table-version{
+    display: none;
+}
+
+/*768px*/
+@media (min-width: 768px){
+    .table-version{
+        display: block;
+        margin: 24px 24px 0 0;
+        font-size: 14px;
+        font-family: 'TT Lakes Regular';
+        color: #1B1C21;
+    }
+
+    table, td{
+        border: 1px solid #F8F8F8;
+        border-collapse: collapse;
+        border-radius: 10px; 
+    }
+    table{
+        width: 100%;
+        height: 356px;
+        background: #fff;
+        font-size: 14px;
+        letter-spacing: 0.2px;
+        line-height: 18px;
+    }
+    th{
+        color: #7E7E82;
+        background: #F8F8F8;
+        letter-spacing: 0;
+        font-weight: normal;
+        text-align: left;
+
+    }
+    td, th{
+        padding-left: 16px;
+    }
+
+    .button-price{
+        margin-left: 15px;
+        width: 119px;
+        height: 32px;
+        border:solid 1px #FF3E79;
+        border-radius: 25px 25px 25px 25px;
+        background: #FF3E79;
+        color: #fff;
+        font-size: 12px;
+        align-self: flex-end;
+        cursor: pointer;
+
+        img{
+            margin-left: 15px;
+        }
+    }
+
+    .price-textinfo{
+        width: 60%;
+        margin-top: 24px;
+    }
+    .сommercial-offer{
+        margin-top: 16px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 24px;
+        font-family: 'TT Lakes Medium'; 
+        cursor: pointer;
+        
+
+        img{
+            margin-left: 5px;
+        }
+    }
+}

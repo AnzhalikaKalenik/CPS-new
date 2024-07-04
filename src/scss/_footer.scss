@@ -1,0 +1,42 @@
+.footer{
+    background: #F8F8F8;
+    margin-bottom: 25px;
+    border-top: 1px solid #D9FFF5;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    
+    gap: 16px;
+    text-align: center;
+    font-family: 'TT Lakes Medium';
+    font-size: 14px;
+    line-height: 16px;
+    color:   #7E7E82;
+    cursor: pointer;
+
+    :hover{
+        color: #1B1C21;
+    }
+
+}
+@media screen and (min-width: 768px){
+    .footer{
+        padding: 24px;
+        flex-direction: row;
+        justify-content: space-between;
+        .team{
+            text-align: left;
+        }
+        .info{
+            width: 30%;
+            text-align: end;
+        }
+    }
+}
+
+@media screen and (min-width: 1120px){
+    footer{
+        margin-left: 320px;
+    }
+}

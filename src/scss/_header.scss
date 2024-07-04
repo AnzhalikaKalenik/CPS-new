@@ -1,0 +1,445 @@
+@font-face {
+	font-family: 'TT Lakes Medium'; 
+	src: url("/fonts/TTLakes-Medium.ttf");
+}
+@font-face {
+	font-family: 'TT Lakes Bold'; 
+	src: url("/fonts/TTLakes-Bold.ttf");
+}
+@font-face {
+	font-family: 'TT Lakes Regular'; 
+	src: url("/fonts/TTLakes-Regular.ttf");
+}
+
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'TT Lakes Medium';
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    background-color: #F8F8F8;
+    color: #1B1C21;
+}
+
+.header{
+    height: 88px;
+    border-bottom: 1px solid #D9FFF5;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding-right: 10px;
+}
+.header__left{
+    display: flex;
+    justify-content: flex-start;
+    z-index: 10;
+    height: 82px;
+}
+.header__right{
+    display: flex;
+    justify-content: flex-end;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    font-family: 'TT Lakes Medium'; 
+}
+.header__right a, .header__right div{
+    margin-right: 16px;
+}
+
+.burger{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 9px;
+    align-self: center;
+    margin-left: 16px;
+}
+.burger span{
+    height: 2px;
+    width: 10px;
+    transform: scale(1);
+    background: #fff;
+}
+.burger::before, .burger::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s easy 0s;
+}
+.burger::before{
+    top: 11px;
+    width: 18px;
+}
+.burger::after{
+    bottom: 11px;
+    width: 14px;
+}
+
+/*Добавляем класс active для анимации бургера*/
+.burger.active span{
+    transform: scale(0);
+}
+.burger.active::before{
+    top:50%;
+    transform: rotate(-45deg)  translate(0, -50%);
+    width: 22px;
+}
+.burger.active::after{
+    bottom:50%;
+    transform: rotate(45deg)  translate(0, 50%);
+    width: 22px;
+}
+
+.nav{
+    width: 320px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 10;
+    margin-top: 82px;
+    padding-top: 10px;
+    padding-left: 16px;
+    background-color: #fff;
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 26px;
+}
+.nav-list li{
+    text-decoration: none;
+    color: #1B1C21;
+    cursor: pointer;
+}
+.nav-list li:active{
+    color: #7E7E82;
+}
+.nav-list li:hover{
+    color: #7E7E82;
+}
+.open{
+    display: flex;
+    animation: burgerAnimation 0.7s;
+}
+@keyframes burgerAnimation{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+
+
+.menu{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #FF3E79;
+    border-radius: 50%;
+    background-color: #FF3E79;
+}
+.lll{
+    display: flex;
+}
+.logo{
+    max-width: 95px;
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+}
+.checkstatus, .repair, .burger-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.circle{
+    border: solid 1px #FF3E79;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: #FF3E79;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.search{
+    display: none;
+}
+.call, .chat, .profile{
+    display: none;
+}
+
+//nav bottom
+.nav__bottom{
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+}
+.contacts{
+    display: flex;
+    column-gap: 16px;
+}
+.mail{
+    margin-top: 16px;
+    text-decoration: none;
+    color: #1B1C21;
+}
+.mail a, .phone a{
+    text-decoration: none;
+    color: #1B1C21;
+}
+.phone{
+    margin-top: 12px;
+
+    font-family: 'TT Lakes Bold'; 
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+}
+.lang{
+    margin-top: 8px;
+    margin-bottom: 32px;
+    display: flex;
+    column-gap: 7px;
+    cursor: pointer;
+}
+.change-lang:active,
+.change-lang:hover{
+    color: #7E7E82;
+}
+
+
+
+//about
+.about{
+    padding-right: 25px;
+}
+.about__title{
+    font-family: 'TT Lakes Bold';
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    margin-bottom: 24px;
+}
+
+.about__title:before{
+    margin-right: 16px;
+    content: "";
+    border-left: 4px solid #41F6D7;    
+}
+
+.slide-menu{
+    display: flex;
+    margin-bottom: 24px;
+    overflow-x: auto;
+    height: 40px;
+    padding-left: 16px;
+    white-space: nowrap;
+}
+.slide-menu button{
+    font-family: 'TT Lakes Medium';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #7E7E82;
+    background-color: #F8F8F8;
+    border: 2px solid #F8F8F8;
+    border-radius: 6px;
+    padding: 8px 8px 8px 16px;
+    cursor: pointer;
+}
+.slide-menu button:hover, .slide-menu button:active{
+    border-color: #41F6D7;
+    background-color: white;
+}
+
+.about__text{
+    padding: 0 16px;
+    font-size: 14px;
+    font-family: 'TT Lakes Regular';
+    line-height: 18px;
+    letter-spacing: 0.2px;
+}
+.about__tablet-text{
+    padding: 16px 16px 0 16px;
+}
+.about__tablet-text, .about__device-text, .about__all-text{
+    display: none;
+    font-size: 14px;
+    font-family: 'TT Lakes Regular';
+    line-height: 18px;
+    letter-spacing: 0.2px;
+}
+.about__all-text{
+    padding: 16px;
+}
+.about__button{
+    padding: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    cursor: pointer;
+}
+.about__button:before{
+    margin: 0 8px;
+    content: url(../img/header/readMore.svg);   
+}
+.about__img{
+    padding-left: 16px;
+    margin-bottom: 35px;
+    width: 100%;
+}
+
+
+
+
+
+
+/*tablet version*/
+@media screen and (min-width: 768px){
+    .nav{
+        padding-top: 28px;
+        padding-left: 28px;
+    }
+   
+    .burger{
+        margin-left: 28px;
+    }
+    .burger-menu::after{
+        position: relative;
+        left: 30px;
+        content: "";
+        border-left: 2px solid #EAEAEA;
+        height: 32px;
+    }
+    .burger-menu{
+        margin-right: 20px;
+    }
+    .logo{
+        margin-left: 28px;
+        display: flex;
+        align-self: center;
+    }
+
+    .call, .chat, .profile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lang{
+        margin-top: 40px;
+    }
+
+    .about__info{
+        display: flex;
+        flex-direction: row;
+
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+    }
+    .about__text{
+        padding-left: 24px;
+        padding-bottom: 24px;
+    }
+    .about__tablet-text{
+        display: block;
+        padding: 0 16px 0 24px;
+    }
+    .about__all-text{
+        padding: 24px;
+    }
+    .about__img{
+        max-height: 300px;
+    }
+}
+
+
+
+
+
+
+/*device version*/
+@media screen and (min-width: 1120px){
+    .header__left{
+        position: fixed;
+        width: 320px;
+        background: #fff;
+    }
+    .nav{
+        display: flex;
+        padding-top: 28px;
+        padding-left: 28px;
+    }
+    .burger{
+        display: none;
+    }
+    .logo{
+        margin-left: 28px;
+        display: flex;
+        align-self: center;
+    }
+    .search{
+        display: flex;
+        align-self: center;
+    }
+    .header .search{
+        margin-left: 120px;
+    }
+    .call, .chat, .profile{
+        display: none;
+    }
+
+    .about__device-text{
+        display: inline;
+    }
+
+    .divider{
+        display: none;
+    }
+
+    .repair:before{
+        content: "Оставить заявку";
+        white-space: nowrap; 
+        position: absolute;
+        right: 50px;
+        color: black;
+    }
+    .checkstatus:before{
+        content: "Статус ремонта";
+        white-space: nowrap;
+        position: absolute;
+        right: 50px;
+        color: black;
+    }
+
+
+    main{
+        margin-top: -88px;
+        margin-left: 320px;
+    }
+    .header{
+        width: 320px;
+    }
+    .checkstatus, .repair{
+        position: absolute;
+        right: 10px;
+        top: 25px;
+    }
+    .header__right .repair{
+        margin-right: 220px;
+    }
+
+}

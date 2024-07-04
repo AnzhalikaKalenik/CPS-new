@@ -1,0 +1,30 @@
+.technics-version {
+    padding: 16px;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+
+    .block-text{
+        align-self: flex-start;
+    }
+    .block-go{
+        align-self: flex-end;
+    }
+}
+
+/*768px*/
+@media (min-width: 768px){
+    .tablet-technics.open, .desktop-technics.open{
+        display: flex;
+    }
+    .tablet-technics, .desktop-technics{
+        display: none;
+    }
+}
+
+/*1120px*/
+@media (min-width: 1120px){
+    .tablet-technics{
+        display: flex;
+    }
+}
